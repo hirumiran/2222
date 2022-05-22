@@ -38,15 +38,15 @@ const images = [
 ]
 
 const selectedImage = images[Math.floor(Math.random() * images.length)];
-//const backgroundImage = document.querySelector('.section-background');
-const body = document.getElementsByTagName('body')[0];
+const backgroundImage = document.querySelector('.section-background');
+const wrap = document.querySelector('#wrap');
 const backgroundInfo = document.querySelector('.background-info');
 const showInfo = document.querySelector('.section-background a');
 const locations = document.querySelector('.location');
 const photo = document.querySelector('.info span');
 const explain = document.querySelector('.explain');
 
-body.style.backgroundImage = `url(images/${selectedImage.url})`;
+wrap.style.backgroundImage = `url(images/${selectedImage.url})`;
 locations.innerText = selectedImage.location;
 photo.innerText = selectedImage.photoby;
 explain.innerText = selectedImage.exp;
