@@ -15,9 +15,7 @@ body {
   word-wrap:break-word;
 	position: relative;
 	overflow-x: hidden;
-	background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+	
 }
 
 input, button {font-family: Pretendard, -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕','helvetica','Apple SD Gothic Neo', sans-serif;border: 0;}
@@ -30,6 +28,9 @@ ul li, ol li {list-style-type: none;}
 	position: relative;
 	width: 100vw;
 	min-height: 100vh;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 }
 
 /* background */
