@@ -1,0 +1,242 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+  padding: 0;
+  font-family: Pretendard, -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕','helvetica','Apple SD Gothic Neo', sans-serif;
+	font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+	word-break: keep-all;
+  word-wrap:break-word;
+	position: relative;
+	overflow-x: hidden;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+input, button {font-family: Pretendard, -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕','helvetica','Apple SD Gothic Neo', sans-serif;border: 0;}
+
+ul li, ol li {list-style-type: none;}
+
+.hidden {display: none;}
+
+/* background */
+.section-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+.background-info {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 15rem;
+	padding: 1rem;
+	transition: all .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+	z-index: 4;
+}
+.background-info a {
+	opacity: .6;
+	display: inline-block;
+	padding: .2rem;
+	background: rgba(0,0,0, .3);
+	color: #fff;
+	text-decoration: none;
+	transition: all .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.background-info.on {
+	background: rgba(0,0,0,.5)
+}
+.background-info.on a {
+	opacity: 1;
+	background: rgba(0,0,0, 0)
+}
+#bg-info {
+	display: none;
+}
+#bg-info div {
+	padding: .5rem 0;
+	color: #fff;
+}
+#bg-info  .location {
+	padding-top: 1rem;
+	border-bottom: 1px solid rgba(255,255,255, .5);
+}
+#bg-info .info {
+	padding: 1rem 0;
+}
+.background-info.on #bg-info {
+	display: block;
+}
+
+/* clock */
+.section-clock {
+	position: absolute;
+	bottom: 4rem;
+	left: 2rem;
+	z-index: 5;
+}
+.section-clock div {
+	color: #fff;
+}
+.section-clock #clock {
+	color: #fff;
+	font-size: 3em;
+	font-weight: 300;
+}
+.section-clock #date {
+	font-size: 1.5em
+}
+.section-clock #weather {
+	margin-top: .5rem;
+	font-size: 1em;
+}
+
+
+/* login */
+.section-login {
+	
+}
+.section-login #login-form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40vw;
+	padding: 2.5rem;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 1.5rem;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+.login-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+}
+.login-area h2 {
+	width: 100%;
+	margin-bottom: 1rem;
+	font-size: 2em;
+}
+.login-area input {
+	height: 40px;
+	line-height: 40px;
+}
+.login-area input[type="text"] {
+	width: 80%;
+	padding-left: .5rem;
+}
+.login-area input[type="submit"] {
+	width: 20%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-size: 1.125em;
+}
+
+/* section todo */
+.section-todo {
+	position: relative;
+	z-index: 1;
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#greeting {
+	margin: 3rem 0 2rem;
+	color: #fff;
+	font-size: 2.875em;
+}
+
+
+#todo-form {
+	position: relative;
+	width: 50vw;
+}
+#todo-form input {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding-left: .5rem;
+	padding-right: 2rem;
+	background: #fff;	
+	border-radius: .3rem;
+	box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.4);
+	font-size: 1.125em;
+}
+#todo-form .fa-solid {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	color: #666;
+}
+
+.wrap-todo-list {
+	width: 50vw;
+	margin-top: 2rem;
+	padding-bottom: 10rem;
+}
+
+#todo-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 10px;
+	width: 100%;
+}
+
+#todo-list li {
+	position: relative;
+	width: calc(25% - 10px);
+	margin: .5rem 0;
+	padding: .5rem 1.5rem 1rem .5rem;
+	background-color: #23b3e8;
+	border: 1px solid rgba(0, 0, 0, .5);
+	border-top: 2px solid rgba(0,0,0,.5);
+	border-radius: 0 0 .5rem 0;
+
+}
+
+#todo-list li button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: transparent
+}
+
+@media (max-width: 980px) {
+	.section-login #login-form {
+		width: 90vw;
+	}
+	#todo-form, .wrap-todo-list {
+		width: 80vw
+	}
+	#todo-list li {
+		width: calc(50% - 10px);
+	}
+}

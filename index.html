@@ -4,13 +4,65 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/9f9c090ead.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
 	<title>Document</title>
 </head>
 <body>
-	<h2>git hub page test</h2>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, laborum minus enim tempore est ullam dicta in aliquid porro fuga ex excepturi, itaque, quidem commodi veniam aut debitis vitae quia!
-		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, tempora iste eligendi iure quia dolorem assumenda fugit sed commodi saepe quas nisi totam debitis necessitatibus quibusdam praesentium rem repudiandae quisquam.
+	<div class="section-background">
+		<div class="background-info">
+			<a href="#bg-info">Do you like this photo?</a>
+			<div id="bg-info">
+				<div class="location"></div>
+				<div class="info">photoBy: <span></span></div>
+				<div class="explain"></div>
+			</div>
+		</div>
+	</div>
 	
-	</p>
+	<div class="section-clock">
+		<h2 id="clock"></h2>
+		<div id="date"></div>
+		<div id="weather">
+		<span></span><span></span>
+		</div>
+	</div>
+
+	<div class="section-login">
+		<form id="login-form">
+			<div class="login-area">
+				<h2>Managing your daily tasks<br>Please sign in!</h2>
+				<input type="text" required maxlength="15" placeholder="What is your name?" class="login-id" />
+				<input type="submit" value="Sign in" />
+			</div>			
+		</form>
+	</div>
+
+	<div class="section-todo hidden">
+		<div class="login" id="greeting">hi</div>
+		<form action="" id="todo-form">
+			<input type="text" placeholder="write a todo and press enter" required>
+			<i class="fa-solid fa-pen-fancy"></i>
+		</form>
+
+		<div class="wrap-todo-list">
+			<ul id="todo-list">
+			</ul>
+		</div>
+
+	</div>
+
+
+	
+	
+
+	<script src="js/background.js"></script>
+	<script src="js/clock.js"></script>
+	<script src="js/greetings.js"></script>
+	<script src="js/todo.js"></script>
+	<script src="js/weather.js"></script>
+
+
+
 </body>
 </html>
