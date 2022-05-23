@@ -1,5 +1,6 @@
 const weather = document.querySelector("#weather span:first-child");
 const city = document.querySelector("#weather span:last-child");
+const API_KEY = ''; // api key 삭제
 
 function onGeoOk(position) {
   const lat = position.coords.latitude;
@@ -15,6 +16,7 @@ function onGeoOk(position) {
       weather.innerText = `${data.weather[0].main}  ${data.main.temp} ℃`;
     });
 	*/
+  /* 임시데이터 */
 	city.innerText = ` / Seoul`;
   weather.innerText = `Clear 17 ℃`;
 }
